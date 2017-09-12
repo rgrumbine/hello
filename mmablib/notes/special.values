@@ -1,0 +1,258 @@
+buoy.h:      alongitude += (360. + x.longitude);
+buoy.h:      alongitude += (x.longitude - 360.);
+buoy.h:    av_time += (time_t) (.005 * 3600.) + 1;
+buoy.h:time_t buoy_report::time_range = (time_t)3600;
+params.h:  const double parameters::eccen2 = 0.006694604; //GRIB standard
+params.h:  const double parameters::rearth  = 6378.137e3; 
+params.h:  const double parameters::rearth  = 6378.160e3; //earth definition is from
+icegrids.h:  const float eccen2 = 0.006694604; 
+icegrids.h:  const float rearth = 6378.160e3;  
+params.h:  #define ECCEN2 0.006694604
+params.h:#define DEGREES_PER (180./M_PI)
+resops.h:  del -=  360.*( (int)(del/360.)) ;
+resops.h:  del -=  360.*( (int)(del/360.)) ;
+resops.h:  del = lon[locr]; if (del >= 360.) del -= 360.;
+resops.h:  del = x.lon[locr]; if (del >= 360.) del -= 360.;
+eta.h:  dlmd  = 0.087603305;
+lambert.h:  dlon -= 180.;
+gaussian.h:  dlon = 360. / (float) this->nx;
+gaussian.h:  dlon = 360. / (float) this->nx;
+gaussian.h:  dlon = 360. / (float) this->nx;
+lambert.h:  dlon = ll.lon - orient + 180. + 3600.;
+params.h:const double parameters::a = 6371.2e3;         //Value from IPLIB
+params.h:const double parameters::radians_per_degree = M_PI / 180.;
+eta.h:  dphd  = 0.075046904;
+lambert.h:  dr = de*pow(tan((90.-h*ll.lat)/2./dpr),an);
+lambert.h:  dr = de / pow(tan( (h*lat1 + 90.)/2. /dpr), an);
+lambert.h:  dr = de / pow(tan( (h*lat1 + 90.)/2. /dpr), an);
+psgrid.h:  dxdeg = 111.1e3;
+psgrid.h:  dxdeg = 111.1e3;
+psgrid.h:       +(dy*(loc.j-polej))*(dy*(loc.j-polej)) ) / dxdeg - 90.  ;
+psgrid.h:       +(dy*(loc.j-polej))*(dy*(loc.j-polej)) ) / dxdeg - 90.  ;
+psgrid.h:   +(dy*(loc.j-polej))*(dy*(loc.j-polej)) ) / dxdeg - 90.  ;
+resops.h:    east += 360.;
+psgrid.h:   float dlat() {return dx/111.1e3; }
+params.h:const float parameters::anomalistic_year = 365.259635;
+params.h:const float parameters::sidereal_year    = 365.256363;
+params.h:const float parameters::tropical_year    = 365.24219;
+params.h:const float parameters::year_days        = 365.259635;  // default to anomalistic, days
+llgrid.h:  fred = M_PI/180.0;
+llgrid.h:  fred = M_PI/180.0;
+llgrid.h:  fred = M_PI/180.0;
+gaussian.h:    gaulats[i] = 90. - g[i];
+gaussian.h:    gaulats[i] = 90. - g[i];
+gaussian.h:    gaulats[i] = g[i] - 90.0;
+eta.h:  hlon = 360. - glonh/rdpdg;
+nmmb.h:  hlon = 360. - glonh/rdpdg;
+buoy.h:    hour = out_time->tm_hour + out_time->tm_min/60. + out_time->tm_sec/3600.;
+buoy.h:  hour = out_time->tm_hour + out_time->tm_min/60. + out_time->tm_sec/3600.;
+psgrid.h:   if ( (90. - fabs(slat) ) < 1.E-3) {
+psgrid.h:  if (-90. - slon < 0.) {
+buoy.h:  if (alongitude <    0.0) alongitude += 360.0;
+buoy.h:  if (alongitude >= 360.0) alongitude -= 360.0;
+buoy.h:    if(alongitude/count > 180.) {
+metric.h:  if (corner.lon < 0.) corner.lon += 360. ;
+metric.h:  if (corner.lon < 0.) corner.lon += 360. ;
+metric.h:  if (corner.lon < 0.) corner.lon += 360. ;
+metric.h:  if (corner.lon < 0.) corner.lon += 360. ;
+resops.h:    if (dlon < -180.) dlon += 360.;
+resops.h:    if (dlon >  180.) dlon -= 360.;
+resops.h:  if (dlon < -180.) dlon += 360.;
+resops.h:  if (dlon >  180.) dlon -= 360.;
+psgrid.h:  if ( fabs(slat - 90) < 1.e-5 ) {
+psgrid.h:  if ( fabs(slat - 90) < 1.e-5 ) {
+buoy.h:  if (fabs(x.longitude-alongitude/count) > 180.) {
+eta.h:  if (hlon >= 360.0) hlon -= 360.;
+nmmb.h:  if (hlon >= 360.0) hlon -= 360.;
+buoy.h:  if (longitude < 0.) longitude += 360.;
+gaussian.h:  if (nwave == 190) {
+resops.h:    if (refll.lon - 360. > this->minlon && refll.lon - 360. < this->maxlon) {
+resops.h:  if (refll.lon > this->maxlon ) refll.lon -= 360.;
+resops.h:  if (refll.lon < this->minlon ) refll.lon += 360.;
+psgrid.h:   if (x.lat*sgn <= 0. || fabs(x.lat) > 90.0 ) {
+mercator.h:    if (xlon > 0.) xlon -= 360.;
+buoy.h:  if (year > 1800) { year -= 1900; } // Change to 2 digits for mktime
+rips.C:  ll.lat = 90.0;
+ncepgrids.h:  ll.lat = 90. - sqrt((double) (tloc.i*tloc.i + tloc.j*tloc.j) );
+ncepgrids.h:  ll.lat = 90. - sqrt((double) (tloc.i*tloc.i + tloc.j*tloc.j));
+ncepgrids.h:  ll.lat = 90. - sqrt((double) (tloc.i*tloc.i + tloc.j*tloc.j));
+ncepgrids.h:  ll.lat = 90. - sqrt((double)(tloc.i*tloc.i + tloc.j*tloc.j));
+lambert.h:  ll.lat = h* (2.*dpr * atan( pow(de2/dr2, antr) ) - 90.);
+lambert.h:  ll.lat = h* (2.*dpr * atan( pow(de2/dr2, antr) ) - 90.);
+lambert.h:    ll.lat = h*90.;
+lambert.h:    ll.lat = h*90.;
+ncepgrids.h:  ll.lon = 180.*psi / M_PI - 110. ;
+ncepgrids.h:  ll.lon = 180.*psi / M_PI - 110.;
+lambert.h:    ll.lon -= 360.;
+lambert.h:    ll.lon -= 360.;
+lambert.h:    ll.lon += 360.;
+lambert.h:    ll.lon += 360.;
+ncepgrids.h:  ll.lon = 90 - 180.*psi / M_PI ;
+ncepgrids.h:  ll.lon = 90 - 180.*psi / M_PI ;
+metric.h:    lon += 360.;
+resops.h:    lon += 360.;
+genes.h:  mvector<float> tmp(9000);
+buoy.h:  obs_time.tm_min     = (int) (60.*(hour - (int)hour) );
+buoy.h:  obs_time.tm_min     = (int) (60.*(hour - (int)hour) );
+buoy.h:  obs_time.tm_min     = (int) (60.*(hour - (int)hour) );
+buoy.h:  obs_time.tm_sec     = (int) (3600.*(hour - (int)hour) - 60*obs_time.tm_min);
+buoy.h:  obs_time.tm_sec     = (int) (3600.*(hour - (int)hour) - 60*obs_time.tm_min);
+buoy.h:  obs_time.tm_sec     = (int) (3600.*(hour - (int)hour) - 60*obs_time.tm_min);
+icegrid.north12:      PARAMETER (dt     = 3600.*6.)
+icegrid.north:      PARAMETER (dt     = 3600.*6.)
+icegrid.south12:      PARAMETER (dt     = 3600.*6.)
+icegrid.south:      PARAMETER (dt     = 3600.*6.)
+icegrid.north12:      PARAMETER (DXDEG  = 111.1E+3)
+icegrid.north:      PARAMETER (DXDEG  = 111.1E+3)
+icegrid.south12:      PARAMETER (DXDEG  = 111.1E+3)
+icegrid.south:      PARAMETER (DXDEG  = 111.1E+3)
+icegrid.north12:      PARAMETER (eccen2 =    0.006694604)
+icegrid.north:      PARAMETER (eccen2 =    0.006694604)
+icegrid.south12:      PARAMETER (eccen2 =    0.006694604)
+icegrid.south:      PARAMETER (eccen2 =    0.006694604)
+icegrid.north12:      PARAMETER (lonmin =  -90.0)
+icegrid.north:      PARAMETER (lonmin =  -90.0)
+icegrid.south12:      PARAMETER (lonmin =  -90.0)
+icegrid.south:      PARAMETER (lonmin =  -90.0)
+icegrid.north12:      PARAMETER (polei  = 190./divisor )
+icegrid.north:      PARAMETER (polei  = 190./divisor )
+icegrid.south12:      PARAMETER (polej  = 180./divisor )
+icegrid.south:      PARAMETER (polej  = 180./divisor )
+icegrid.north12:      PARAMETER (rearth = 6378.160E3)
+icegrid.north:      PARAMETER (rearth = 6378.160E3)
+icegrid.south12:      PARAMETER (rearth = 6378.160E3)
+icegrid.south:      PARAMETER (rearth = 6378.160E3)
+icegrid.north12:      PARAMETER (slat   =   60.0)  ! slat must be absolute value!!
+icegrid.north:      PARAMETER (slat   =   60.0)  ! slat must be absolute value!!
+icegrid.south12:      PARAMETER (slat   =   60.0)  ! slat must be absolute value!!
+icegrid.south:      PARAMETER (slat   =   60.0)  ! slat must be absolute value!!
+color.h:  point3<T> pal16( 50,100, 90), pal17( 40,100, 50), pal18( 65,100, 40);
+color.h:  point3<T> pal19( 85, 95, 40), pal110(100, 70, 30), pal111(100, 50, 20);
+lambert.h:            pow(tan( (h*reflat + 90.)/2. /dpr), an) / an;
+lambert.h:            pow(tan( (h*reflat + 90.)/2. /dpr), an) / an;
+lambert.h:            pow(tan( (this->h*this->reflat + 90.)/2. /dpr), this->an) / this->an;
+mercator.h:  rearth = 6378.2064e3   ;
+resops.h:      refll.lon -= 360.;
+resops.h:    refll.lon -= 360.;
+resops.h:    refll.lon += 360.;
+resops.h:         refll.lon-360., refll.lon);
+ncepgrids.h:  retloc.i = this->xorig + (90.+ll.lat)*sin(2.*M_PI*(90.-ll.lon)/360.);
+ncepgrids.h:  retloc.i = this->xorig + (90.-ll.lat)*sin(2.*M_PI*(ll.lon+110.)/360.);
+ncepgrids.h:  retloc.j = this->yorig + (90.+ll.lat)*cos(2.*M_PI*(90.-ll.lon)/360.);
+ncepgrids.h:  retloc.j = this->yorig + (90.-ll.lat)*cos(2.*M_PI*(ll.lon+110.)/360.);
+buoy.h:      return ( fabs(latitude) < 90.1);
+mercator.h:  slat =  (45.+2./60.+24./3600.)*rpdg;  // NIC said 45
+psgrid.h:  slat = 60.;
+mercator.h:  slon = -(84.+8./60.+24./3600.)*rpdg;  // NIC said -84
+buoy.h:    slp = 900. + slp/10.;
+buoy.h:    slp = (slp - 900)*10.+0.5;
+params.h:#define SPHEREA 6371.2e3
+ncepgrids.h:  this->dlat = - (float) res / 60.0;
+eta.h:  this->dlmd  = 0.087603305;
+nmmb.h:  this->dlmd  = 0.087603305;
+ncepgrids.h:  this->dlon =   (float) res / 60.0;
+eta.h:  this->dphd  = 0.075046904;
+nmmb.h:  this->dphd  = 0.075046904;
+lambert.h:  this->dr = this->de / pow(tan( (this->h*this->lat1 + 90.)/2. /dpr), this->an);
+ncepgrids.h:  this->firstlat = -90.0;
+ncepgrids.h:  this->firstlat = 90.0;
+ncepgrids.h:  this->firstlat = 90.0;
+ncepgrids.h:  this->firstlat = 90.0;
+ncepgrids.h:  this->firstlat = 90.0;
+ncepgrids.h:  this->firstlat = 90.0;
+ncepgrids.h:  this->firstlat = 90.0;
+ncepgrids.h:  this->firstlat =  90.0 + this->dlat/2.;
+ncepgrids.h:  this->firstlat = 90.0 + this->dlat / 2.;
+ncepgrids.h:  this->firstlat =  - 90. + this->dlat / 2.; 
+ncepgrids.h:  this->firstlat =  90. + this->dlat / 2.;
+ncepgrids.h:  this->firstlat =  90. + this->dlat / 2.;
+ncepgrids.h:  this->firstlat =  90. + this->dlat / 2.;
+ncepgrids.h:  this->firstlat =  90. + this->dlat / 2.;
+ncepgrids.h:  this->firstlat =  90. + this->dlat / 2.;
+ncepgrids.h:  this->firstlat =  90. + this->dlat / 2.;  
+ncepgrids.h:  this->firstlon = -180.0;
+legacy.h:  this->firstlon = +180.0 - this->dlon/2.;
+ncepgrids.h:  this->firstlon = 360.-70.- this->dlon/2.;
+psgrid.h:    this->gds.gds[8] = (int) (1000.*(-90. - slon) );
+psgrid.h:    this->gds.gds[8] = (int) (1000.*(-90. - slon + 360.) );
+resops.h:    this->maxlon += 360.;
+resops.h:    this->minlon += 360.;
+gaussian.h:    this->nx = 1760;
+ncepgrids.h:  this->nx = 360 ;
+ncepgrids.h:  this->nx = 360;
+ncepgrids.h:  this->nx = 360;
+ncepgrids.h:  this->nx = 360;
+ncepgrids.h:  this->nx = 360*4;
+ncepgrids.h:  this->nx = 360*4;
+ncepgrids.h:  this->nx = 360*4;
+ncepgrids.h:  this->nx = (360*60) / res;
+eta.h:  this->nx = 606;
+eta.h:  this->nx = 606;
+nmmb.h:  this->nx = 606;
+ncepgrids.h:  this->nx = 720;
+ncepgrids.h:  this->nx = 720;
+ncepgrids.h:  this->nx = (int) (0.5 + 360.*degreefrac);
+ncepgrids.h:  this->nx = (int) (0.5 + 360.*degreefrac);
+ncepgrids.h:  this->nx = (int) (0.5 + 360.*degreefrac);
+ncepgrids.h:  this->nx = (int) (0.5 + 360.*degreefrac);
+ncepgrids.h:  this->nx = (int) (0.5 + 360.*degreefrac);
+ncepgrids.h:  this->nx = (int) (0.5 + 360.*degreefrac);
+ncepgrids.h:  this->nx = (int) (0.5 + 360.*degreefrac);
+ncepgrids.h:  this->nx = (int) (0.5 + (-52+360 - this->firstlon) /  this->dlon);
+ncepgrids.h:  this->ny = 180;
+ncepgrids.h:  this->ny = 180*4+1;
+ncepgrids.h:  this->ny = 180*4+1;
+ncepgrids.h:  this->ny = 180*4+1;
+ncepgrids.h:  this->ny = (180*60) / res;
+ncepgrids.h:  this->ny = 360;
+ncepgrids.h:  this->ny = (int) (0.5 + 180.*degreefrac);
+ncepgrids.h:  this->ny = (int) (0.5 + 180.*degreefrac);
+ncepgrids.h:  this->ny = (int) (0.5 + 180.*degreefrac);
+ncepgrids.h:  this->ny = (int) (0.5 + 180.*degreefrac);
+ncepgrids.h:  this->ny = (int) (0.5 + 180.*degreefrac);
+ncepgrids.h:  this->ny = (int) (0.5 + 180.*degreefrac);
+ncepgrids.h:  this->ny = (int) (0.5 + 180.*degreefrac);
+legacy.h:  this->ny = (int) (0.5 +  60 / this->dlat);
+lambert.h:  this->orient = -90; 
+ncepgrids.h:  this->slat = 58.5;  // Note that the grid isn't quite 60.0
+legacy.h:  this->slat = 60.0;
+legacy.h:  this->slat = 60.0;
+ncepgrids.h:  this->slat = 60.0;
+ncepgrids.h:  this->slat = 60.0;
+ncepgrids.h:  this->slat = 60.0;
+ncepgrids.h:  this->slat = 60.0;
+ncepgrids.h:  this->slat = 60.0;  
+ncepgrids.h:  this->slat  = 60.0;
+ncepgrids.h:  this->slon = (-90.0+180);
+ncepgrids.h:  this->slon = (-90.0+180);
+ncepgrids.h:  this->slon = (-90.0+180);
+ncepgrids.h:  this->slon = 90. ; // -80 in old version
+ncepgrids.h:  this->slon = 90. ; // -80 in old version
+eta.h:  this->tlm0d = -111.0;
+eta.h:  this->tlm0d = -111.0;
+eta.h:  this->tlm0d = -111.0;
+eta.h:  this->tlm0d = -111.0;
+nmmb.h:  this->tlm0d = -111.0;
+legacy.h:  this->xorig = (-190. * this->dx  / HIRES_RATIO);
+ncepgrids.h:  this->yorig = (-180. * this->dy );
+eta.h:  tlm0d = -111.0;
+resops.h:          tlon = minlon + dlondi[loc]*retloc.i - 360.;
+resops.h:          tlon = minlon + dlondi[loc]*retloc.i + 360.;
+buoy.h:  tmvar.tm_min  = (int) ((hour - (int) hour)*60.);
+buoy.h:  tmvar.tm_sec  = (int) ((hour - (int) hour)*3600. - 60.*tmvar.tm_min);
+buoy.h:  tmvar.tm_year = year - 1900;
+resops.h:    west += 360.;
+lambert.h:  while (dlon > 360.) {dlon -= 360.;}
+llgrid.h:    while (inlon < 0.) { inlon += 360.; }
+lambert.h:  while (ll.lon < -180.) {
+lambert.h:  while (ll.lon < -180.) {
+lambert.h:  while (ll.lon > 360.) {
+lambert.h:  while (ll.lon > 360.) {
+llgrid.h:    while (tlon < 0.) { tlon += 360.; } 
+llgrid.h:      while (y.lon < firstlon) { y.lon += 360.; }
+llgrid.h:      while (y.lon < firstlon) { y.lon += 360.; }
+llgrid.h:  while (y.lon < firstlon) { y.lon += 360.; }
+resops.h:          x.lon[tloc] = this->lon[sloc] - 360.;
+psgrid.h:      y.lat  = 90. * sgn;
+psgrid.h:      y.lat  = 90. * sgn;
+mercator.h:  yorig =  3306260.;

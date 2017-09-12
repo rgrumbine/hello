@@ -1,0 +1,18 @@
+//Robert Grumbine
+
+ cbase = 65;
+381, 127, 25.4, 12.7, 
+#define M_PI 3.14159265358979323846
+ else if (fabs(dist2) < 1.e-6 ) // small distance
+// small angle = ?
+// short time = ?
+// NCEP STD Latitude = 60.0 N, S
+// NCEP std longitude = 80 W (N. Hemisphere)
+// hycom: pad_value = pow(2.0, 100.0);
+
+#define eccen2 0.006694604 
+ dxdeg = 111.1e3;
+ eccen = sqrt(eccen2);
+ eccen2 = f*(2.-f);
+ f = 1. / 294.9786982 ; // flattening
+ palette<unsigned char> gg(19, 65);

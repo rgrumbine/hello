@@ -1,0 +1,16 @@
+Various modifications:
+
+satellite files now specify in names which satellite is used, ex, SSMI_T19V rather than T19V
+metric.h -- extracted mercator, llgrid, psgrid, and added walcc.h
+mvector.h -- extracted datavector, time_series
+
+add ssanaly, ciagree (scoring)
+add tvap (water vapor pressure)
+add darcdis (double precision arcdis)
+
+add/update comments
+place cout.flush() after error messages
+printf -> cout
+
+fortran -- un-numbered do, implicit none, REAL*4 (et al.) -> REAL
+

@@ -1,0 +1,57 @@
+Updates to the mmab library:
+
+points.h:
+  add operator=(latpt &x);
+  delete unused code segments
+
+fromall.h:
+  add diagnostic output option
+  add bullet-proofing to i index
+
+grid3.h:
+  add error-checking to put_layer
+
+color.h:
+  add color by color option to 'lighten'.
+
+buoy.h:
+  insert #endif (important! else could block usage of valid later code)
+
+metric.h:
+  add w3fi72 to LINUX branch of ifdefs
+  ensure type double in psgrid::integrate
+  ensure type double in llgrid::integrate
+  updated class mercator (efficiency, documentation, ..)
+
+grid_base.h:
+  add ::set to ingest a bare (ftn-style) array
+  bugfix on grid2_base::anyof
+
+vector.h:
+  add vector(const vector<T>&) -- standards compliance
+
+grid_math.h:
+  add grid_math::rms,
+       ::gridmax(T) -- these compute values while ignoring values of 'T"
+       ::gridmin(T)
+       ::rms(T)
+  add optional debugging output to reader
+
+cofs.h:
+  add cfsreg(const cfsreg<T> &); -- standards compliance
+  bugfix on cfsreg(cfsreg<T> &);
+  add cfsgrid(const cfsgrid<T>&); -- standards compliance
+  updated comments regarding cfsnative
+  bool land (ijpt) and land(ijpt, toler) added
+  template declarations for the initialization of static members -- standards 
+
+
+####
+# New files:
+eta.h: Beginnings of a class to manage working with the native eta grids.
+
+genes.h: Class for executing genetic algorithms
+
+params.h: Class for containing global constants, such as the radius of the 
+         earth
+

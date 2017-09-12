@@ -1,0 +1,21 @@
+resops.h, llgrids.h, grid_math, grid_base, mvector:
+  output catastropes to stderr rather than stdout
+
+buoy.h:
+  update ARCDIS usage to conformance with metric.h
+
+datavector.h:
+  hardwire type rather than templates.
+
+gaussian.h:
+  add 'define's for various grids
+  drop unistd.h
+
+grid_math
+  add scale(low,high) for graphics out
+
+mvector:
+  type cast for returns in max/min
+
+ncepgrids.h
+  add gfs_quarter class

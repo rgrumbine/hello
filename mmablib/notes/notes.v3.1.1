@@ -1,0 +1,37 @@
+all:
+  stdio.h -> cstdio
+fflush  -> cout.fflush
+
+*** work on in its own right ***
+1523 ncepgrids.h -- 
+                 -- splitting out pieces
+                      -- segments: psgrids, llgrids, 
+ 392 color.h     -- unity/sanity of elements
+                      -- make color class
+ 329 gaussian.h  -- t7XX, t15XX, 'linear', ...
+  36 gshhs.h     -- go to current version, at least 1.10
+
+*** versions to unify ***
+1810 metric.h  -- 
+  split out psgrid class (a la gaussian, ...)
+           -- add psgrid::subset functionality
+  split out llgrid class (+rotllgrid)
+  split out mercator class 
+
+1153 mvector.h -- member initialization; split out metricvector, time_series classes 
+               -- move to a datavector group: otislev, otistag, levitus_depths, nodc_depths
+
+1116 grid_base.h 
+               -- operators to flip (in j) and flop (in i) data inputs
+
+ 856 cofs.h 
+ 724 buoy.h 
+ 621 genes.h 
+ 244 ssmiclass.h 
+ 177 icessmi.h 
+  57 ssmi.h 
+  55 icegrids.h 
+  52 icegrid.south12 
+
+*** Almost done with unification
+1086 grid_math.h 
